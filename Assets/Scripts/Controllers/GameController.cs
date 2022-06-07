@@ -16,6 +16,8 @@ namespace FlappyBirdGame
             _kindOfPilot = KindOfPilot.Bird;
             _pilotCreator.Reset(_pilots[(int)_kindOfPilot]);
             _pilotCreator.Init();
+            _pilotCreator.CreatePilot();
+            _pilotCreator.CreatePilotView();
             _pilot = _pilotCreator.Result();
         }
         private void Update()

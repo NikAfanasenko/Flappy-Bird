@@ -10,10 +10,9 @@ namespace FlappyBirdGame
         private float _speed;
         private GameObject _prefab;
         private GameObject _scenePrefab;
-        private Rigidbody _physics;
         public void Reset(PilotScriptableObject pilotSO)
         {
-            (_speed, _prefab, _physics) = pilotSO;
+            (_speed, _prefab) = pilotSO;
         }
         public void Init()
         {
@@ -26,17 +25,13 @@ namespace FlappyBirdGame
 
         public void CreatePilotView()
         {
-            _pilotView = new PilotView(_scenePrefab, _physics); 
+            _pilotView = new PilotView(_scenePrefab); 
         }
 
         public void Deconstruct(out IFlyable pilot, out PilotView pilotView)
         {
             pilot = _pilot;
             pilotView = _pilotView;
-        }
-        private void OnEnable()
-        {
-            _pilot.TakeOffEvent += _pilotView.TakeOff;
         }
         private void OnDisable()
         {
@@ -45,6 +40,7 @@ namespace FlappyBirdGame
 
         public IFlyable Result()
         {
+            _pilot.TakeOffEvent += _pilotView.TakeOff;
             return _pilot;
         }
     }
