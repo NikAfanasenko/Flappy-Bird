@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b48e38448f0eb43acfffb1ff2554fc, type: 3}
   m_Name: Bird
   m_EditorClassIdentifier: 
-  _speed: 0
-  _prefab: {fileID: 0}
-  _physics: {fileID: 0}
+  _speed: 5
+  _prefab: {fileID: 6465035404426835755, guid: ad135fee25bb6e8499e9f7ce6d9740ee, type: 3}

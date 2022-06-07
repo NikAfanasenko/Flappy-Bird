@@ -34,6 +34,8 @@ namespace FlappyBirdGame
                 if (_pipePool.Count > 0)
                 {
                     var pipe = _pipePool.Dequeue();
+                    pipe.SetActive(true);
+                   
                 }
 
             }
