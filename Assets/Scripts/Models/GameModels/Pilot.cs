@@ -14,7 +14,7 @@ namespace FlappyBirdGame
 
         public void Fly()
         {
-            TakeOffEvent?.Invoke(); ;
+            TakeOffEvent?.Invoke();
         }
     }
 }
