@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PilotView 
 {
-    private const float FORCE = 400.0f;
+    private const float FORCE = 300.0f;
     private GameObject _prefab;
     private Rigidbody _physics;
     public GameObject Prefab => _prefab;
